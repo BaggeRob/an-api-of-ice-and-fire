@@ -1,6 +1,6 @@
 
-
 const restify = require('restify');
+const postcards = require('./postcards/postcards');
 
 const server = restify.createServer({
   name: 'monolith-evolution',
@@ -19,6 +19,8 @@ server.get('/', function (req, res, next) {
   res.send(discovery);
   return next();
 });
+
+postcards(server);
 
 server.listen(5000, function () {
   console.log('%s listening at %s', server.name, server.url);

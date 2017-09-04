@@ -1,0 +1,18 @@
+{
+  "1": {
+    "_links": {
+      "self": {
+        "href": "/postcards/1"
+      }
+    },
+    "text": "Lorem ipsum 1"
+  },
+  "2": {
+    "_links": {
+      "self": {
+        "href": "/postcards/2"
+      }
+    },
+    "text": "Lorem ipsum 2"
+  }
+}
