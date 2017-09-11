@@ -1,18 +1,16 @@
 {
   "1": {
-    "_links": {
-      "self": {
-        "href": "/postcards/1"
-      }
+    "text": "Lorem ipsum 1",
+    "sender": {
+      "firstName": "Carolina",
+      "lastName": "Skiles"
     },
-    "text": "Lorem ipsum 1"
+    "receiver": {
+      "firstName": "Lelah",
+      "lastName": "Marks"
+    }
   },
   "2": {
-    "_links": {
-      "self": {
-        "href": "/postcards/2"
-      }
-    },
     "text": "Lorem ipsum 2"
   }
 }
