@@ -1,5 +1,4 @@
-{
-  "1": {
+[{
     "text": "Lorem ipsum 1",
     "sender": {
       "firstName": "Carolina",
@@ -10,7 +9,6 @@
       "lastName": "Marks"
     }
   },
-  "2": {
+  {
     "text": "Lorem ipsum 2"
-  }
-}
+  }]
