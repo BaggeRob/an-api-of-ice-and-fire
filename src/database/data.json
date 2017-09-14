@@ -1,4 +1,5 @@
 [{
+    "id": 1,
     "text": "Lorem ipsum 1",
     "sender": {
       "firstName": "Carolina",
@@ -10,5 +11,6 @@
     }
   },
   {
+    "id": 2,
     "text": "Lorem ipsum 2"
   }]
