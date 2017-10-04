@@ -1,10 +1,10 @@
-const { data } = require('./data');
+const { postcards } = require('./data');
 
 const findPostcard = (id) =>
-  data
+  postcards
     .filter(postcard => postcard.id == id)[0];
 
-const findPostcards = () => data;
+const findPostcards = () => postcards;
 
 module.exports = {
   findPostcard,

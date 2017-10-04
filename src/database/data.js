@@ -1,4 +1,4 @@
-const data = [
+const postcards = [
   {
     id: 1,
     text: 'Lorem ipsum 1',
@@ -26,11 +26,10 @@ const data = [
         townCity: 'London',
         county: undefined,
         postcode: 'EC1 GP1',
-
       }
     },
   }];
 
 module.exports = {
-  data,
+  postcards,
 };
