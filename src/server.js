@@ -1,28 +1,20 @@
-
 const restify = require('restify');
 const postcards = require('./postcards/postcards');
 const postcard = require('./postcards/postcard');
+const discovery = require('./discovery');
 
 const server = restify.createServer({
   name: 'monolith-evolution',
   version: '1.0.0'
 });
 
+// setup server
 server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser());
 
-server.get('/', function (req, res, next) {
-  const discovery = {
-    discovery: '/',
-    ...postcards.discovery,
-    ...postcard.discovery,
-  };
-
-  res.send(discovery);
-  return next();
-});
-
+// register resources
+discovery.registerResourceFor(server);
 postcards.registerResourceFor(server);
 postcard.registerResourceFor(server);
 
