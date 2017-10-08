@@ -7,7 +7,7 @@ const address = require('./addresses/address');
 
 const discovery = {
   registerResourceFor: server => {
-    server.get('/', function (req, res, next) {
+    server.get('/', (req, res, next) => {
       const discovery = {
         discovery: '/',
         ...messages.discovery,

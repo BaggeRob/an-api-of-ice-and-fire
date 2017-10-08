@@ -22,7 +22,7 @@ const server = restify.createServer({
   log,
 });
 
-server.pre(function (request, response, next) {
+server.pre((request, response, next) => {
   request.log.info({ req: request }, 'REQUEST');
   next();
 });
@@ -41,9 +41,8 @@ contact.registerResourceFor(server);
 addresses.registerResourceFor(server);
 address.registerResourceFor(server);
 
-
 const port = process.argv[2] || 5000;
 
-server.listen(port, function () {
+server.listen(port, () => {
   console.log('%s listening at %s', server.name, server.url);
 });
