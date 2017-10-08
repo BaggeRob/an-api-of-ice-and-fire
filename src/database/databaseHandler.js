@@ -1,12 +1,14 @@
-const { postcards } = require('./data');
+const {
+  messages,
+} = require('./data');
 
-const findPostcard = (id) =>
-  postcards
-    .filter(postcard => postcard.id == id)[0];
+const findMessage = (id) =>
+  messages
+    .filter(message => message.id == id)[0];
 
-const findPostcards = () => postcards;
+const findMessages = () => messages;
 
 module.exports = {
-  findPostcard,
-  findPostcards,
+  findMessage,
+  findMessages,
 };

@@ -1,13 +1,13 @@
-const postcards = require('./postcards/postcards');
-const postcard = require('./postcards/postcard');
+const messages = require('./messages/messages');
+const message = require('./messages/message');
 
 const discovery = {
   registerResourceFor: server => {
     server.get('/', function (req, res, next) {
       const discovery = {
         discovery: '/',
-        ...postcards.discovery,
-        ...postcard.discovery,
+        ...messages.discovery,
+        ...message.discovery,
       };
 
       res.send(discovery);

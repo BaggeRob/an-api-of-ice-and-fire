@@ -1,8 +1,8 @@
 const restify = require('restify');
 const Logger = require('bunyan');
-const postcards = require('./postcards/postcards');
-const postcard = require('./postcards/postcard');
 const discovery = require('./discovery');
+const message = require('./messages/message');
+const messages = require('./messages/messages');
 
 const log = new Logger.createLogger({
   name: 'api-evolution',
@@ -29,8 +29,8 @@ server.use(restify.plugins.bodyParser());
 
 // register resources
 discovery.registerResourceFor(server);
-postcards.registerResourceFor(server);
-postcard.registerResourceFor(server);
+messages.registerResourceFor(server);
+message.registerResourceFor(server);
 
 server.listen(5000, function () {
   console.log('%s listening at %s', server.name, server.url);
