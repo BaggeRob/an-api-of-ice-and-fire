@@ -1,11 +1,25 @@
 const restify = require('restify');
+const Logger = require('bunyan');
 const postcards = require('./postcards/postcards');
 const postcard = require('./postcards/postcard');
 const discovery = require('./discovery');
 
+const log = new Logger.createLogger({
+  name: 'api-evolution',
+  serializers: {
+    req: Logger.stdSerializers.req
+  }
+});
+
 const server = restify.createServer({
   name: 'monolith-evolution',
-  version: '1.0.0'
+  version: '1.0.0',
+  log: log
+});
+
+server.pre(function (request, response, next) {
+  request.log.info({ req: request }, 'REQUEST');
+  next();
 });
 
 // setup server
