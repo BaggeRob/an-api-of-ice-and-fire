@@ -32,6 +32,9 @@ discovery.registerResourceFor(server);
 messages.registerResourceFor(server);
 message.registerResourceFor(server);
 
-server.listen(5000, function () {
+
+const port = process.argv[2] || 5000;
+
+server.listen(port, function () {
   console.log('%s listening at %s', server.name, server.url);
 });
