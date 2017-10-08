@@ -16,7 +16,7 @@ const log = new Logger.createLogger({
 const server = restify.createServer({
   name: 'monolith-evolution',
   version: '1.0.0',
-  log: log
+  log,
 });
 
 server.pre(function (request, response, next) {
