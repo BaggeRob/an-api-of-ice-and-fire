@@ -1,5 +1,6 @@
 const {
   messages,
+  contacts,
 } = require('./data');
 
 const findMessage = (id) =>
@@ -8,7 +9,14 @@ const findMessage = (id) =>
 
 const findMessages = () => messages;
 
+const findContacts = () => contacts;
+
+const findContact = id => contacts
+  .filter(contact => contact.id == id)[0];
+
 module.exports = {
   findMessage,
   findMessages,
+  findContacts,
+  findContact,
 };

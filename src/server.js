@@ -3,6 +3,8 @@ const Logger = require('bunyan');
 const discovery = require('./discovery');
 const message = require('./messages/message');
 const messages = require('./messages/messages');
+const contact = require('./contacts/contact');
+const contacts = require('./contacts/contacts');
 
 const log = new Logger.createLogger({
   name: 'api-evolution',
@@ -31,6 +33,8 @@ server.use(restify.plugins.bodyParser());
 discovery.registerResourceFor(server);
 messages.registerResourceFor(server);
 message.registerResourceFor(server);
+contacts.registerResourceFor(server);
+contact.registerResourceFor(server);
 
 server.listen(5000, function () {
   console.log('%s listening at %s', server.name, server.url);
