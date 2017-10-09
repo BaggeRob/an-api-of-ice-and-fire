@@ -18,7 +18,7 @@ const messageType = new GraphQLObjectType({
     },
     _embedded: {
       type: messageEmbedded,
-      resolve: message => message,
+      resolve: message => message._links,
     }
   }),
 });

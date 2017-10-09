@@ -9,9 +9,9 @@ const messageEmbedded = new GraphQLObjectType({
   fields: () => ({
     recipient: {
       type: contact,
-      resolve: message => {
-        const recipientReference = message._links.recipient.href;
-        console.log(recipientReference);
+      resolve: messageLinks => {
+        const recipientReference = messageLinks.recipient.href;
+
         return contactsResolver.resolveContactForReference(recipientReference);
       },
     }
