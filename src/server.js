@@ -8,6 +8,8 @@ const contact = require('./contacts/contact');
 const contacts = require('./contacts/contacts');
 const addresses = require('./addresses/addresses');
 const address = require('./addresses/address');
+const graphiql = require('./graphql/graphiql');
+const graphql = require('./graphql/graphqlQuery');
 
 const log = new Logger.createLogger({
   name: 'api-evolution',
@@ -40,6 +42,8 @@ contacts.registerResourceFor(server);
 contact.registerResourceFor(server);
 addresses.registerResourceFor(server);
 address.registerResourceFor(server);
+graphql.registerResourceFor(server);
+graphiql.registerResourceFor(server);
 
 const port = process.argv[2] || 5000;
 

@@ -1,13 +1,36 @@
-const { findMessage } = require('../database/databaseHandler');
+const { graphql } = require('graphql');
+const graphQLSchema = require('../graphql/schema');
+
+const findMessageGraphQLQuery = messageId =>
+  `{
+      message(reference: "/messages/${messageId}") {
+        _links
+        message
+        _embedded {
+          recipient {
+            ...recipientFields
+          }
+        }
+      }
+   }
+
+  fragment recipientFields on Contact {
+      _links
+      firstName
+      lastName
+      occupation
+  }
+  `;
 
 const message = {
   discovery: {
     message: '/messages/{id}',
   },
   registerResourceFor: server => {
-    server.get('/messages/:id', (req, res, next) => {
+    server.get('/messages/:id', async (req, res, next) => {
       const id = req.params.id;
-      const message = findMessage(id);
+      const messageResponse = await graphql(graphQLSchema, findMessageGraphQLQuery(id), 'message');
+      const message = messageResponse.data.message;
 
       res.send(message);
       next();
