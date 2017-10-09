@@ -29,6 +29,10 @@ const findAddress = id =>
   addresses
     .filter(address => address.id == id)[0];
 
+const findAddressForReference = reference =>
+  addresses
+    .filter(address => address._links.self.href === reference)[0];
+
 module.exports = {
   findMessage,
   findMessages,
@@ -37,5 +41,6 @@ module.exports = {
   findAddresses,
   findAddress,
   findMessageForReference,
-  findContactForReference
+  findContactForReference,
+  findAddressForReference
 };
