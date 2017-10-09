@@ -3,6 +3,7 @@ const {
   GraphQLString,
 } = require('graphql');
 const linksType = require('./links');
+const contactEmbedded = require('./contactEmbedded');
 
 const contactType = new GraphQLObjectType({
   name: 'Contact',
@@ -23,6 +24,10 @@ const contactType = new GraphQLObjectType({
       type: GraphQLString,
       resolve: contact => contact.occupation,
     },
+    _embedded: {
+      type: contactEmbedded,
+      resolve: contact => contact._links,
+    }
   }),
 });
 
