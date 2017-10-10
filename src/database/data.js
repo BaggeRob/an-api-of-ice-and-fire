@@ -37,10 +37,10 @@ const contacts = [
         href: '/',
       },
       self: {
-        href: '/contacts/1',
+        href: '/contacts/2',
       },
       address: {
-        href: '/addresses/1',
+        href: '/addresses/2',
       },
     },
     id: 1,
@@ -54,10 +54,10 @@ const contacts = [
         href: '/',
       },
       self: {
-        href: '/contacts/2',
+        href: '/contacts/1',
       },
       address: {
-        href: '/addresses/2',
+        href: '/addresses/1',
       },
     },
     id: 2,

@@ -19,6 +19,20 @@ const findMessageGraphQLQuery = messageId =>
       firstName
       lastName
       occupation
+      _embedded {
+        address {
+          ...addressFields
+        }
+      }
+  }
+  
+  fragment addressFields on Address {
+    _links
+    building
+    street
+    townCity
+    county
+    postcode
   }
   `;
 
