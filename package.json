@@ -1,5 +1,5 @@
 {
-  "name": "evolving-monolith-graphql",
+  "name": "an-api-of-ice-and-fire",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
@@ -7,7 +7,7 @@
     "start": "node src/server.js"
   },
   "author": "Robert Bagge",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bunyan": "^1.8.12",
     "faker": "^4.1.0",
