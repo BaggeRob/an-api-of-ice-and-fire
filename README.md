@@ -2,7 +2,6 @@
 
 # An Api of Ice and Fire
 
-## Intro
 The purpose of the project is to show a few different forms an API can take
 as you evolve it from monolith to microservices.
 
@@ -10,10 +9,10 @@ To take it closer to a real-life situation, it has been evolved around an imagin
 "Raven dispatching service" that helps our characters in Game of Thrones to order 
 ravens through a simple mobile app.
 
-At the moment the api only supports get-requests and is constructed around the
+At the moment the api only supports get-requests and is designed around the
 resources needed to display a "raven checkout page".
 
-![app flow](resources/pictures/app-flow-1.png "Initial app flow")
+![app flow](resources/images/app-flow-1.png "Initial app flow")
 
 
 ## Running the project
