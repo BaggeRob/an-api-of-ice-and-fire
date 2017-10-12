@@ -1,0 +1,404 @@
+{
+	"variables": [],
+	"info": {
+		"name": "an-api-of-ice-and-fire",
+		"_postman_id": "ae49bb17-de48-1efd-da06-08709fe70cd6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "monolith",
+			"description": "",
+			"item": [
+				{
+					"name": "discovery",
+					"request": {
+						"url": "{{monolith}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message-summary",
+					"request": {
+						"url": "{{monolith}}/messages/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "messages",
+					"request": {
+						"url": "{{monolith}}/messages",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message",
+					"request": {
+						"url": "{{monolith}}/messages/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "monolith-duplication",
+			"description": "",
+			"item": [
+				{
+					"name": "discovery",
+					"request": {
+						"url": "{{monolith-duplication}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message-summary",
+					"request": {
+						"url": "{{monolith-duplication}}/messages/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "messages",
+					"request": {
+						"url": "{{monolith-duplication}}/messages",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message",
+					"request": {
+						"url": "{{monolith-duplication}}/messages/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "contacts",
+					"request": {
+						"url": "{{monolith-duplication}}/contacts",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "contact",
+					"request": {
+						"url": "{{monolith-duplication}}/contacts/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "partly-decoupled",
+			"description": "",
+			"item": [
+				{
+					"name": "discovery",
+					"request": {
+						"url": "{{monolith-partly-decoupled}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message-summary",
+					"request": {
+						"url": "{{monolith-partly-decoupled}}/messages/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "messages",
+					"request": {
+						"url": "{{monolith-partly-decoupled}}/messages",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message",
+					"request": {
+						"url": "{{monolith-partly-decoupled}}/messages/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "contacts",
+					"request": {
+						"url": "{{monolith-partly-decoupled}}/contacts/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "contact",
+					"request": {
+						"url": "{{monolith-partly-decoupled}}/contacts/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "decoupled-monolith",
+			"description": "",
+			"item": [
+				{
+					"name": "discovery",
+					"request": {
+						"url": "{{monolith-decoupled}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message-summary",
+					"request": {
+						"url": "{{monolith-decoupled}}/messages/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "messages",
+					"request": {
+						"url": "{{monolith-decoupled}}/messages",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message",
+					"request": {
+						"url": "{{monolith-decoupled}}/messages/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "contacts",
+					"request": {
+						"url": "{{monolith-decoupled}}/contacts/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "contact",
+					"request": {
+						"url": "{{monolith-decoupled}}/contacts/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "addresses",
+					"request": {
+						"url": "{{monolith-decoupled}}/addresses",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "address",
+					"request": {
+						"url": "{{monolith-decoupled}}/addresses/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "decoupled-monolith-graphql",
+			"description": "",
+			"item": [
+				{
+					"name": "discovery",
+					"request": {
+						"url": "{{monolith-decoupled-graphql}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message-summary",
+					"request": {
+						"url": "{{monolith-decoupled-graphql}}/messages/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "messages",
+					"request": {
+						"url": "{{monolith-decoupled-graphql}}/messages",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "message",
+					"request": {
+						"url": "{{monolith-decoupled-graphql}}/messages/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "contacts",
+					"request": {
+						"url": "{{monolith-decoupled-graphql}}/contacts/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "contact",
+					"request": {
+						"url": "{{monolith-decoupled}}/contacts/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "addresses",
+					"request": {
+						"url": "{{monolith-decoupled-graphql}}/addresses",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "address",
+					"request": {
+						"url": "{{monolith-decoupled-graphql}}/addresses/{id}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "graphql-query",
+					"request": {
+						"url": "{{monolith-decoupled-graphql}}/query",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
